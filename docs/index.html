@@ -1,13 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio 14</title>
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <h1 class="font-bold">holas</h1>
+    <header class="hero">
+        <nav class="nav container" id="nav">
+            <h1 class="nav-title">Laboratorio 14</h1>
+            <ul class="nav-links">
+                <li class="nav-item item-html">
+                    <a href="#" class="nav-link btn-html" onclick="showSection('html'), toggleMenu(false)">HTML5</a>
+                </li>
+                <li class="nav-item item-css">
+                    <a href="#" class="nav-link btn-css" onclick="showSection('css'), toggleMenu(false)">CSS</a>
+                    <ul class="submenu">
+                        <li><a class="nav-link" href="#">Unidades CSS</a></li>
+                        <li><a class="nav-link" href="#">Modelos de caja</a></li>
+                         <li><a class="nav-link" href="#">Bordes CSS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item item-js">
+                    <a href="#" class="nav-link btn-js" onclick="showSection('js'), toggleMenu(false)">JS</a>
+                </li>
+            </ul>
+            <ul class="nav-links-md">
+                <li class="nav-item">
+                    <a href="#" class="btn-html-md" onclick="showSection('html')">HTML5</a>
+                </li>
+                <li class="nav-item item-css-md">
+                    <a href="#" class="btn-css-md" onclick="showSection('css')">CSS</a>
+                    <ul class="submenu">
+                        <li><a class="nav-link" href="#">Unidades CSS</a></li>
+                        <li><a class="nav-link" href="#">Modelos de caja</a></li>
+                         <li><a class="nav-link" href="#">Bordes CSS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn-js-md" onclick="showSection('js')">JS</a>
+                </li>
+            </ul>
+            <a href="#nav" class="nav-bars" onclick="toggleMenu(true)"><i class="fa-solid fa-bars"></i></a>
+            <a href="#" class="nav-close" onclick="toggleMenu(false)"><i class="fa-solid fa-xmark"></i></a>
+        </nav>
+    </header>
+    <main class="content-main" style="padding-bottom: 20px;">
+        <div class="content html5" id="html5">
+            <img class="logo-lenguaje" src="./img/Logo-HTML.svg" alt="">
+            <h2 class="title-section">¿Qué es HTML?</h2>
+            <p class="parrafo">El documento que lee el navegador está escrito en un lenguaje de marcado llamado HTML, que son las siglas
+                de HyperText Markup Language (Lenguaje de marcas de hipertexto), o lo que es lo mismo, un lenguaje de
+                etiquetas que permite incluir o hacer referencia a todo tipo de información.</p>
+            <h2 class="title-section">¿Qué es una etiqueta HTML?</h2>
+            <p class="parrafo">Dicho documento esta formado por etiquetas, que son la base del lenguaje HTML. Existen muchas etiquetas y
+                cada una se utiliza para contener información y darle un cierto significado a dicha información,
+                dependiendo de la etiqueta que se trate. Las etiquetas HTML tienen la siguiente estructura:</p>
+            <img class="img-code" src="./img/lenguaje-html.png" alt="">
+            <h2 class="title-section">¿Qué es la semántica?</h2>
+            <p class="parrafo" style="padding-bottom: 20px;">Uno de los principales objetivos de HTML5 es introducir información en un documento HTML5 de forma que
+                sea semántico y no visual. Con esto queremos decir que todos los aspectos visuales deben dejarse para el
+                apartado de presentación, que se gestiona desde el lenguaje CSS.
+            </p>
+        </div>
+        <div class="content css" id="css">
+            <img class="logo-lenguaje" src="./img/Logo-css.svg" alt="">
+            <h2 class="title-section">¿Qué es CSS?</h2>
+            <p class="parrafo">Las siglas CSS (Cascading Style Sheets) significan «Hojas de estilo en cascada» y parten de un concepto simple pero muy potente: aplicar estilos (colores, formas, márgenes, etc...) a uno o varios documentos (generalmente documentos HTML, páginas webs) de forma automática y masiva.</p>
+            <h2 class="title-section">¿Por qué se usa CSS?</h2>
+            <p class="parrafo">La idea de CSS es la de utilizar el concepto de separación de presentación y contenido. Este concepto se basa en que, como programadores, lo ideal es separar claramente el código que escribimos. ¿Por qué? Porque con el tiempo, esto hará que el código sea más fácil de modificar y mantener. Así es la estructura de un documento CSS:</p>
+            <img class="img-code" src="./img/lenguaje-css.png" alt="">
+            <p class="parrafo" style="padding-bottom: 20px;">De esta forma, se puede unificar todo lo relativo al diseño, a lo visual en un solo documento CSS, y con ello, varias ventajas. Si necesitamos hacer modificaciones visuales, lo haremos en un sólo lugar y se aplica a todo el sitio. Se reduce la duplicación de estilos en diferentes lugares. Es más fácil de organizar y hacer cambios. La información a transmitir es considerablemente menor (las páginas se descargan más rápido). Es más fácil crear versiones diferentes para otros dispositivos: tablets, smartphones, etc...
+            </p>
+        </div>
+        <div class="content js" id="js">
+            <img class="logo-lenguaje" src="./img/Logo-JS.svg" alt="">
+            <h2 class="title-section">¿Qué es Javascript?</h2>
+            <p class="parrafo">es un lenguaje de programación, o lo que es lo mismo, un mecanismo con el que podemos decirle a nuestro navegador que tareas debe realizar, en que orden y cuantas veces. Muchas de las tareas que realizamos con HTML y CSS se podrían realizar con Javascript. De hecho, es muy probable que al principio nos parezca que es mucho más complicado hacerlo con Javascript, y que por lo tanto no merece la pena. Sin embargo, con el tiempo veremos que Javascript nos ofrece una mayor flexibilidad y un abanico de posibilidades más grande, y que bien usadas, pueden ahorrarnos bastante tiempo.</p>
+            <h2 class="title-section">Utilidad</h2>
+            <p class="parrafo">Imaginemos que tenemos que crear una lista de números desde el 1 hasta el 500. Hacerlo solamente con HTML sería muy tedioso, ya que tendríamos que copiar y pegar esas filas varias veces hasta llegar a 500. Sin embargo, mediante Javascript, podemos decirle al navegador que escriba el primer párrafo, que luego escriba el mismo pero sumándole uno al número. Y que esto lo repita hasta llegar a 500.</p>
+            <img class="img-code" src="./img/lenguaje-js.png" alt="">
+            <h2 class="title-section">Dificultad</h2>
+            <p class="parrafo" style="padding-bottom: 20px;">Aunque Javascript es ideal en muchos casos, es mucho más complicado aprender Javascript (o un lenguaje de programación de propósito general) que aprender HTML o CSS, los cuales son mucho más sencillos de comprender (o al menos, su base y fundamentos). Dicho esto, es necesario tener presente que aprender a programar es una tarea que no ocurre de un día para otro. Requiere tiempo, esfuerzo, acostumbrarse a cambiar la forma de pensar y practicar mucho.
+            </p>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/9db5429df9.js" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

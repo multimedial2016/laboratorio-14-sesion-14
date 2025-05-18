@@ -1,2 +1,1 @@
-# Calculadora HTML CSS JS
-![](./docs/img/screen-calculadora.png)
+# Laboratorio 14 Sitio Web Estático
